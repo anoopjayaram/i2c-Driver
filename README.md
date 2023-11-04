@@ -1,3 +1,4 @@
+I2C MICROCHIP DOCUMENTATION :- https://ww1.microchip.com/downloads/en/devicedoc/i2c.pdf
 I2C PIC184580 TO ATMEGA32 CONNECTION DIAGRAM
 
 This project for demonstrating the working of** I2C Protocol**.  
