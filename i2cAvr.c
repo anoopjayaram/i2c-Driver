@@ -7,35 +7,36 @@
 #define F_CPU 8000000UL
 #include <avr/io.h>
 #include <util/delay.h>
-void i2c_init();
-char i2c_statusw();
-char i2c_statusr();
-void trans(char b)
+void I2C_INIT();
+char I2C_READ_DATA();
+void UART_INIT();
+int main(void)
+{
+	DDRA=DDRB=0xff;
+	DDRD=0X02;
+	UART_INIT();
+	I2C_INIT();
+	char v=I2C_READ_DATA();
+	UART_TRANSMIT(v);
+	char w=I2C_READ_DATA();
+	UART_TRANSMIT(w);
+	while(1);
+}
+
+void UART_INIT()
+{
+	UCSRA=0X00;
+	UCSRB=0X18;
+	UCSRC=0X86;
+	UBRRL=0X33;
+	UBRRH=0X00;
+}
+
+void UART_TRANSMIT(char b)
 {
 	while((UCSRA&0X20)==0);
 	UCSRA=0X20;
-    UDR=b;	
-}
-int main(void)
-{
-	
-		DDRA=DDRB=0xff;
-		DDRD=0X02;
-		UCSRA=0X00;
-		UCSRB=0X18;
-		UCSRC=0X86;
-		UBRRL=0X33;
-		UBRRH=0X00;
-		i2c_init();
-		char v=i2c_statusr();
-		trans(v);
-		char w=i2c_statusr();
-		trans(w);
-	while(1)
-	{
-		
-			
-	}
+    	UDR=b;	
 }
 
 void i2c_init()
@@ -48,7 +49,7 @@ void i2c_init()
 
 }
 
-char i2c_statusr()
+char I2C_READ_DATA()
 {
 	TWCR=(1<<TWINT)|(1<<TWEN)|(1<<TWEA);  // TWCR=0x44;  Clear TWI interrupt flag,Enable TWI
 	while (!(TWCR & (1<<TWINT))); //while((TWCR&(0x80))==0); slave ad+W
