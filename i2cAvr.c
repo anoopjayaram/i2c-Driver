@@ -1,15 +1,10 @@
-/*
- * main.c
- *
- * Created: 3/26/2022 10:32:07 AM
- *  Author: anoop
- */ 
 #define F_CPU 8000000UL
 #include <avr/io.h>
 #include <util/delay.h>
 void I2C_INIT();
 char I2C_READ_DATA();
 void UART_INIT();
+void UART_TRANSMIT(char b);
 int main(void)
 {
 	DDRA=DDRB=0xff;
@@ -39,7 +34,7 @@ void UART_TRANSMIT(char b)
     	UDR=b;	
 }
 
-void i2c_init()
+void I2C_INIT()
 {
 	DDRC=0;//1111 1111
 	TWAR=0xd0;//  02 0   0110 1000 0x61
