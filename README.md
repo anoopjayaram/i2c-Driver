@@ -8,6 +8,6 @@ The **PIC18F4580** is configured as **Master** and **ATMEGA32** as **Slave** dev
 PROGRAM PROTEUS SIMULATION  
 
 The character 'S' and 'M' is the data which is sent from Master to Slave device.  
-
+The data frame format can be viewed from the i2c Debugger window.
   
 ![i2c circuit output](https://github.com/anoopjayaram/i2c-Driver/assets/66719752/00af842e-1d04-4658-934a-b1b38588354e)
