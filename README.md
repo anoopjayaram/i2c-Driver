@@ -17,7 +17,10 @@ PROGRAM PROTEUS SIMULATION
   
 ![i2c circuit output](https://github.com/anoopjayaram/i2c-Driver/assets/66719752/00af842e-1d04-4658-934a-b1b38588354e)
 
-
-
+MASTER READING DATA FROM SLAVE
 
 ![i2c circuit1](https://github.com/anoopjayaram/i2c-Driver/assets/66719752/5ef41954-c7ad-4430-90dd-103bf8f30669)
+
+OUTPUT  
+
+![i2c circuit output1](https://github.com/anoopjayaram/i2c-Driver/assets/66719752/990b0d79-7801-4641-a085-d9dc62e3209c)
