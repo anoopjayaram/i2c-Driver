@@ -9,7 +9,8 @@ I2C PIC184580 TO ATMEGA32 CONNECTION DIAGRAM
 
 
 PROGRAM PROTEUS SIMULATION  
-![i2c circuit1](https://github.com/anoopjayaram/i2c-Driver/assets/66719752/5ef41954-c7ad-4430-90dd-103bf8f30669)
+
+# i2c-Driver![i2c circuit](https://github.com/anoopjayaram/i2c-Driver/assets/66719752/3e057e47-a58b-4afe-9b9d-6702b7d9d2d0)
 
 >> The character 'S' and 'M' is the data which is sent from Master to Slave device.  
 >> The data frame format can be viewed from the i2c Debugger window.
@@ -18,4 +19,5 @@ PROGRAM PROTEUS SIMULATION
 
 
 
-# i2c-Driver![i2c circuit](https://github.com/anoopjayaram/i2c-Driver/assets/66719752/3e057e47-a58b-4afe-9b9d-6702b7d9d2d0)
+
+![i2c circuit1](https://github.com/anoopjayaram/i2c-Driver/assets/66719752/5ef41954-c7ad-4430-90dd-103bf8f30669)
