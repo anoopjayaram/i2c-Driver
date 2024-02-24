@@ -9,7 +9,7 @@ void TRANSMIT_CHAR(char b);
 void main()
 {
 	int i;
-    TRISC=TRISD=0x00;
+    TRISD=0x00;
     TRISC=0x18;
     TXSTA=0x24;
     RCSTA=0x90;
