@@ -46,7 +46,8 @@ void I2C_INIT()
 
 char I2C_READ_DATA()
 {
-	TWCR=(1<<TWINT)|(1<<TWEN)|(1<<TWEA);  // TWCR=0x44;  Clear TWI interrupt flag,Enable TWI
+	TWCR=0x44;// TWCR=0x44;  Clear TWI interrupt flag,Enable TWI
+	TWCR|=0x80;
 	while (!(TWCR & (1<<TWINT))); //while((TWCR&(0x80))==0); slave ad+W
 	return TWDR;
 
