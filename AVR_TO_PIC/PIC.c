@@ -16,7 +16,7 @@ void main()
     SPBRG=129;
     I2C_INIT();
     _I2C_START();//start slavead+R/w  
-    I2C_SEND_DATA(0xd1);//1101 00 d0 and 1
+    I2C_SEND_DATA(0xf1);//1101 00 d0 and 1
     char m=I2C_READ_DATA(0);
     TRANSMIT_CHAR(m);
 
