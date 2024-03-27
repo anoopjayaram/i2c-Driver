@@ -36,7 +36,7 @@ void UART_TRANSMIT(char b)
 void I2C_INIT()
 {
 	DDRC=0;//1111 1111
-	TWAR=0xd0;//  02 0   0110 1000 0x61
+	TWAR=0xf0;//  02 0   0110 1000 0x61
 	TWCR=0x44;//ack
 	TWCR|=0x80;// TWCR=TWCR|0x80
 	while((TWCR&(0x80))==0);//slave
