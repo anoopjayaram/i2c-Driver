@@ -20,10 +20,10 @@
  */
 
 /* 
- * File:   
- * Author: 
- * Comments:
- * Revision history: 
+ * File:   header.h
+ * Author: anoop jayaram
+ * Comments: Intercacing PIC18F4580 with EEPROM IC
+ * Revision history:  V1.0
  */
 
 // This is a guard condition so that contents of this file are not included
