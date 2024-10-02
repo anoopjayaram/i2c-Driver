@@ -17,14 +17,14 @@ int main(void)
 	DDRA=DDRB=0xff;
 	DDRD=0X02;
 	UART_INIT();
-	
-	while(1){
-        
+
+	while(1)
+	{
         I2C_INIT();
 	char v=I2C_READ_DATA();
-	UART_TRANSMIT(v);
-    UART_TRANSMIT('\r');
-    UART_TRANSMIT('\n');
+ 	UART_TRANSMIT(v);
+        UART_TRANSMIT('\r');
+        UART_TRANSMIT('\n');
     }
 }
 
