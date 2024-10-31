@@ -22,6 +22,8 @@ int main(void)
 	{
         I2C_INIT();
 	char v=I2C_READ_DATA();
+	v=I2C_READ_DATA(); //SKIPPING
+	v=I2C_READ_DATA(); //SKIPPING
  	UART_TRANSMIT(v);
         UART_TRANSMIT('\r');
         UART_TRANSMIT('\n');
